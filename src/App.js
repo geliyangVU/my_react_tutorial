@@ -7,12 +7,21 @@ class App extends React.Component {
       count:0
     }
     this.handler=this.handler.bind(this)
+    this.handlerDecrement=this.handlerDecrement.bind(this)
     }
 
   handler(){
-    this.setState(prevs => {
+    this.setState(prevState => {
       return {
-        count: prevs.count +1
+        count: prevState.count +1
+      }
+    })
+  }
+
+  handlerDecrement(){
+    this.setState(prevState=>{
+      return{
+        count:prevState.count-5
       }
     })
   }
@@ -22,7 +31,8 @@ class App extends React.Component {
       <div>
         <p>THis is the start of app</p>
         <h1>{this.state.count}</h1>
-        <button onClick={this.handler}>increment!</button>
+        <button onClick={this.handler}>Increment!</button>
+        <button onClick={this.handlerDecrement}>Decrement!</button>
       </div>
     )
   }
