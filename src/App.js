@@ -29,7 +29,7 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <p>THis is the start of appsdfsdfs</p>
+        <p>THis is the start of apps</p>
         <h1>{this.state.count}</h1>
         <button onClick={this.handler}>Increment!</button>
         <button onClick={this.handlerDecrement}>Decrement!</button>
